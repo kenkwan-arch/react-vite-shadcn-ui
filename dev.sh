@@ -44,7 +44,3 @@ fi
 
 echo "Container started, development server is running on port $PORT"
 echo "Access your application at: http://localhost:$PORT"
-
-# View application logs
-echo "Showing container logs (Ctrl+C to exit logs but keep containers running):"
-docker compose logs -f app
