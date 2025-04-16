@@ -1,15 +1,24 @@
 {
   "compilerOptions": {
     "composite": true,
-    /* Paths (for shadcn/ui since paths in tsconfig.app.json are not working) */
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "jsx": "react-jsx",
+
+    /* Add this to allow .tsx extensions in imports */
+    "allowImportingTsExtensions": true,
+
+    /* When using allowImportingTsExtensions, noEmit must be true */
+    "noEmit": true,
+
+    /* Other options */
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true
   },
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
